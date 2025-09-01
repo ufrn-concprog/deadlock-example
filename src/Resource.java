@@ -19,8 +19,8 @@ public class Resource {
      * the use of the <em>synchronized</em> keyword.
      * When a method or a block of code is declared as synchronized, like this one, Java acquires a lock on a
      * specific object (in this case, <em>resource</em>), and only the thread that holds this lock can execute the
-     * synchronized code. Other threads attempting to enter the synchronized section will be blocked until the
-     * lock is released by the currently executing thread.
+     * synchronized code. Other threads attempting to enter will be blocked until the lock is released by the
+     * currently executing thread.
      * @param resource Reference to the resource
      */
     synchronized void use(final Resource resource) {
