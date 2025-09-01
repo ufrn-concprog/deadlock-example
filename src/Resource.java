@@ -28,18 +28,19 @@ public class Resource {
         synchronized (this) {
             System.out.println(Thread.currentThread().getName() + " locked " + this.name);
             try {
-                Thread.sleep(50);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
             System.out.println(Thread.currentThread().getName() + " is attempting to lock " + resource);
             synchronized (resource) {
-                System.out.println(resource);
+                System.out.println(Thread.currentThread().getName() + " locked " + resource);
             }
         }
     }
 
+    @Override
     public String toString() {
-        return this.name;
+        return name;
     }
 }

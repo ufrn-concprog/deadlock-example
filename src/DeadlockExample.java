@@ -1,5 +1,5 @@
 /**
- * Main program
+ * Main program: demonstration of a deadlock between two threads in Java
  * @author <a href="mailto:everton.cavalcante@ufrn.br">Everton Cavalcante</a>
  */
 public class DeadlockExample {
