@@ -1,8 +1,14 @@
 /**
  * Main program: demonstration of a deadlock between two threads in Java
+ *
  * @author <a href="mailto:everton.cavalcante@ufrn.br">Everton Cavalcante</a>
  */
 public class DeadlockExample {
+    /**
+     * Main method
+     *
+     * @param args Command-line arguments
+     */
     public static void main(String[] args) {
         final Resource resourceA = new Resource("Resource A");
         final Resource resourceB = new Resource("Resource B");

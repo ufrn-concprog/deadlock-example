@@ -1,13 +1,15 @@
 /**
  * Class representing a resource to be held by a thread
+ *
  * @author <a href="mailto:everton.cavalcante@ufrn.br">Everton Cavalcante</a>
  */
 public class Resource {
-    /** A name for the resource */
+    /**  A name for the resource */
     private final String name;
 
     /**
      * Parameterized constructor
+     *
      * @param name Name to assign to the resource
      */
     public Resource(String name) {
@@ -21,6 +23,7 @@ public class Resource {
      * specific object (in this case, <em>resource</em>), and only the thread that holds this lock can execute the
      * synchronized code. Other threads attempting to enter will be blocked until the lock is released by the
      * currently executing thread.
+     *
      * @param resource Reference to the resource
      */
     synchronized void use(final Resource resource) {

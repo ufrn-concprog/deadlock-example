@@ -5,10 +5,16 @@ import java.lang.management.ThreadMXBean;
 /**
  * Demonstration of the use of the {@link java.lang.management.ThreadMXBean} interface to
  * programmatically detect a deadlock in a Java program
+ *
  * @author <a href="mailto:everton.cavalcante@ufrn.br">Everton Cavalcante</a>
  */
 public class DeadlockDetection {
-    public static void main (String[] args) {
+    /**
+     * Main method
+     *
+     * @param args Command-line arguments
+     */
+    public static void main(String[] args) {
         final Resource resourceA = new Resource("Resource A");
         final Resource resourceB = new Resource("Resource B");
 
@@ -21,7 +27,7 @@ public class DeadlockDetection {
         t1.start();
         t2.start();
 
-        // Check for deadlocks periodically
+        // Check for deadlocks
         Thread deadlockChecker = new Thread(() -> {
             ThreadMXBean threadMXBean = ManagementFactory.getThreadMXBean();
             while (true) {
