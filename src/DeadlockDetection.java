@@ -29,7 +29,7 @@ public class DeadlockDetection {
                 long[] deadlockedThreadIds = threadMXBean.findDeadlockedThreads();
 
                 if (deadlockedThreadIds != null) {
-                    System.out.println("\nDeadlock detected with " + deadlockedThreadIds.length + " threads");
+                    System.out.println("\nFound " + deadlockedThreadIds.length + " deadlocked threads");
                     ThreadInfo[] infos = threadMXBean.getThreadInfo(deadlockedThreadIds);
                     for (ThreadInfo info : infos) {
                         System.out.print(info.toString());
