@@ -2,7 +2,7 @@
  * Main program
  * @author <a href="mailto:everton.cavalcante@ufrn.br">Everton Cavalcante</a>
  */
-public class Main {
+public class DeadlockExample {
     public static void main(String[] args) {
         final Resource resourceA = new Resource("Resource A");
         final Resource resourceB = new Resource("Resource B");
