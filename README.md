@@ -48,7 +48,7 @@ This will place compiled `.class` files inside the `out/` directory.
 
 **Deadlock Example**
 
-Demonstrates a deadlock
+In this example, *Thread T1* is created with *Resource A* assigned and wants to hold *Resource B*, while *Thread T2* is created with *Resource B* assigned and wants to hold *Resource A*. This circular wait represents a deadlock.
 
 ```bash
 java -cp out DeadlockExample
@@ -93,8 +93,6 @@ Found 2 deadlocked threads
 Thread T1 is BLOCKED on object Resource@4c2ad864 owned by Thread T2
 Thread T2 is BLOCKED on object Resource@1186ab6c owned by Thread T1
 ```
-
-In this example, *Thread T1* is created with *Resource A* assigned and wants to hold *Resource B*, while *Thread T2* is created with *Resource B* assigned and wants to hold *Resource A*. This circular wait represents a deadlock.
 
 ---
 
