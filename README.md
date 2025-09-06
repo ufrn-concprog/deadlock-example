@@ -5,7 +5,7 @@
 ![Build](https://img.shields.io/badge/build-manual-lightgrey)
 [![Docs](https://img.shields.io/badge/docs-Javadoc-green)](./doc/index.html)
 
-An educational repository demonstrating deadlocks in Java multithreading, and how to detect them. The learning objectives are:
+An educational repository demonstrating deadlocks in Java multithreading and how to detect them. The learning objectives are:
 
 - Understand what a deadlock is in concurrent programming.  
 - See a minimal reproducible example of two threads competing for resources.  
@@ -46,7 +46,9 @@ This will place compiled `.class` files inside the `out/` directory.
 
 ### ▶️ Running
 
-**Deadlock Example** (demonstrates a deadlock):
+**Deadlock Example**
+
+Demonstrates a deadlock
 
 ```bash
 java -cp out DeadlockExample
@@ -69,7 +71,9 @@ The deadlock occurrence can also be viewed using visual tools like:
 - [JConsole](https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr009.html) is a visual, standalone tool included in the JDK to monitor either local or remote processes
 - [VisualVM](https://visualvm.github.io/) is a free, cross-platform visual tool to examine execution over the JVM
 
-**Deadlock Detection** (uses the [`ThreadMXBean`](https://docs.oracle.com/en/java/javase/23/docs/api/java.management/java/lang/management/ThreadMXBean.html) interface provided by the [`java.lang.management package`](https://docs.oracle.com/en/java/javase/23/docs/api/java.management/java/lang/management/package-summary.html) to detect the deadlock programmatically:
+**Deadlock Detection** 
+
+Uses the [`ThreadMXBean`](https://docs.oracle.com/en/java/javase/23/docs/api/java.management/java/lang/management/ThreadMXBean.html) interface provided by the [`java.lang.management package`](https://docs.oracle.com/en/java/javase/23/docs/api/java.management/java/lang/management/package-summary.html) to detect the deadlock programmatically:
 
 ```bash
 java -cp out DeadlockDetection
