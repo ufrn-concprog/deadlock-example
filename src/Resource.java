@@ -4,7 +4,7 @@
  * @author <a href="mailto:everton.cavalcante@ufrn.br">Everton Cavalcante</a>
  */
 public class Resource {
-    /**  A name for the resource */
+    /**  A name for the resource   */
     private final String name;
 
     /**

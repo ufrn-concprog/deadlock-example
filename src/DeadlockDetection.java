@@ -1,5 +1,4 @@
 import java.lang.management.ManagementFactory;
-import java.lang.management.ThreadInfo;
 import java.lang.management.ThreadMXBean;
 
 /**
@@ -36,9 +35,12 @@ public class DeadlockDetection {
 
                 if (deadlockedThreadIds != null) {
                     System.out.println("\nFound " + deadlockedThreadIds.length + " deadlocked threads");
-                    ThreadInfo[] infos = threadMXBean.getThreadInfo(deadlockedThreadIds);
-                    for (ThreadInfo info : infos) {
-                        System.out.print(info.toString());
+                    for  (long threadId : deadlockedThreadIds) {
+                        System.out.printf("%s is %s on object %s owned by %s\n",
+                                threadMXBean.getThreadInfo(threadId).getThreadName(),
+                                threadMXBean.getThreadInfo(threadId).getThreadState(),
+                                threadMXBean.getThreadInfo(threadId).getLockInfo(),
+                                threadMXBean.getThreadInfo(threadId).getLockOwnerName());
                     }
                     break; // Stop after detection
                 }
